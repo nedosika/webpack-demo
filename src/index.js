@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom/client";
+import App from "./App";
 
 ReactDom
     .createRoot(document.querySelector("#root"))
-    .render(<h1>Hello from React.js</h1>);
+    .render(<App/>);

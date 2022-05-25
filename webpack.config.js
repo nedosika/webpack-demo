@@ -4,8 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        index: './src/index.js',
-        print: './src/print.js',
+        index: './src/index.js'
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -18,10 +17,11 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-react', '@babel/preset-env'],
-                        plugins: ['@babel/plugin-transform-runtime'],
-                    },
+                    // can be use in .babelrc.js
+                    // options: {
+                    //     presets: ['@babel/preset-react', '@babel/preset-env'],
+                    //     plugins: ['@babel/plugin-transform-runtime'],
+                    // },
                 },
             },
         ],
@@ -35,8 +35,5 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'build'),
         clean: true,
-    },
-    optimization: {
-        runtimeChunk: 'single',
-    },
+    }
 };
