@@ -1,9 +1,13 @@
 import React from 'react';
 import babelImage from "./babel.png";
+import styles from "./styles.module.css";
 
 const Babel = () => {
     return (
-        <img alt="babel image" src={babelImage}/>
+        <div>
+            <img alt="babel image" src={babelImage}/>
+            <button className={styles.error}>test</button>
+        </div>
     );
 };
 
