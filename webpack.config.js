@@ -24,6 +24,10 @@ module.exports = {
                     // },
                 },
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
         ],
     },
     plugins: [
@@ -34,6 +38,7 @@ module.exports = {
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'build'),
+        assetModuleFilename: 'assets/images/[name]-[hash][ext]',
         clean: true,
     }
 };
