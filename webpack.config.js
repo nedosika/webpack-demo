@@ -6,6 +6,12 @@ const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 
 module.exports = {
     mode: 'development',
+    resolve: {
+        alias: {
+            Components: path.resolve(__dirname, 'src/components/'),
+            Pages: path.resolve(__dirname, 'src/pages/'),
+        },
+    },
     entry: {
         index: './src/index.js'
     },
