@@ -1,6 +1,6 @@
 import React from 'react';
-import Babel from "./components/Babel/Babel";
-import Webpack from "./components/Webpack/Webpack";
+import Babel from "Components/Babel";
+import Webpack from "Components/Webpack";
 
 const App = () => {
     return (
