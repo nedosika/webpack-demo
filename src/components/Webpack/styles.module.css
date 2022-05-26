@@ -1,0 +1,11 @@
+.wrapper {
+    background-color: grey;
+}
+
+.img {
+    display: block;
+}
+
+.input {
+    margin: 5px;
+}
