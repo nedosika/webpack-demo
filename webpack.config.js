@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 
 module.exports = {
     mode: 'development',
@@ -50,5 +52,13 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         assetModuleFilename: 'assets/images/[name]-[hash][ext]',
         clean: true,
-    }
+    },
+    optimization: {
+        minimizer: [
+            `...`, //syntax to extend existing minimizers (i.e. `terser-webpack-plugin`) webpack 5
+            new CssMinimizerPlugin(),
+            new HtmlMinimizerPlugin(),
+        ],
+        minimize: true
+    },
 };
