@@ -32,7 +32,7 @@ module.exports = {
             {
                 test: /\.css$/i,
                 //use: ['style-loader', 'css-loader'],
-                use: [MiniCssExtractPlugin.loader, "css-loader"]
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
         ],
     },
@@ -41,7 +41,7 @@ module.exports = {
             template: "./public/index.html",
         }),
         new MiniCssExtractPlugin({
-            filename: "[name].css",
+            filename: "[name]-[contenthash].css",
             chunkFilename: "[id].css",
         }),
     ],
