@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
+const DefinePlugin = require("webpack").DefinePlugin;
 
 module.exports = {
     mode: 'development',
@@ -49,9 +50,14 @@ module.exports = {
             template: "./public/index.html",
         }),
         new MiniCssExtractPlugin({
-            filename: "[name]-[contenthash].css",
+            filename: "[name]-[fullhash].css",
             chunkFilename: "[id].css",
         }),
+        new DefinePlugin({
+            PRODUCTION: JSON.stringify(true),
+            VERSION: JSON.stringify('5fa3b9'),
+            'process.env': JSON.stringify(process.env),
+        })
     ],
     output: {
         filename: '[name].bundle.js',
@@ -62,7 +68,17 @@ module.exports = {
     optimization: {
         minimizer: [
             `...`, //syntax to extend existing minimizers (i.e. `terser-webpack-plugin`) webpack 5
-            new CssMinimizerPlugin(),
+            new CssMinimizerPlugin({
+                minify: CssMinimizerPlugin.cssnanoMinify,
+                minimizerOptions: {
+                    preset: [
+                        "default",
+                        {
+                            discardComments: { removeAll: true },
+                        },
+                    ],
+                },
+            }),
             new HtmlMinimizerPlugin(),
         ],
         minimize: true
