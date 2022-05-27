@@ -1,12 +1,14 @@
 import React from 'react';
+
 import webpackImage from "./webpack.png";
 import styles from "./styles.module.css";
 
 const Webpack = () => {
     return (
-        <div className={styles.wrapper}>
+        <div>
             <img className={styles.img} alt="webpack image" src={webpackImage}/>
-            <input className={styles.input} type='text'/>
+            <input type='text'/>
+            <button>test</button>
         </div>
     );
 };
