@@ -39,7 +39,7 @@ module.exports = {
                 type: 'asset/resource',
             },
             {
-                test: /\.css$/i,
+                test: /\.s[ac]ss$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
@@ -52,6 +52,12 @@ module.exports = {
                             sourceMap: true,
                         }
                     },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    }
                 ],
             },
         ],

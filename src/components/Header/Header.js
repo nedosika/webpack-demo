@@ -1,8 +1,9 @@
 import React from 'react';
-import styles from "./Header.module.css";
-import logoImg from "./logotype.svg";
-import locationImg from "./location.svg";
-import accountImg from "./my_account.svg";
+import styles from "./Header.module.scss";
+import logoImg from "./assets/logotype.svg";
+import phoneImg from "./assets/phone_2.svg";
+import locationImg from "./assets/location.svg";
+import accountImg from "./assets/my_account.svg";
 
 const Header = () => {
     return (
@@ -15,7 +16,7 @@ const Header = () => {
                     <a href="tel:+38 (012) 345 678 90">
                         <img
                             alt="phone"
-                            src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/phone_2.svg"
+                            src={phoneImg}
                             width="24"
                         />
                     </a>
