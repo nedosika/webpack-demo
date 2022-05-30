@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
-const DefinePlugin = require("webpack").DefinePlugin;
+const {DefinePlugin} = require("webpack");
 
 module.exports = {
     mode: 'development',
@@ -39,9 +39,26 @@ module.exports = {
                 type: 'asset/resource',
             },
             {
-                test: /\.css$/i,
-                //use: ['style-loader', 'css-loader'],
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                test: /\.s[ac]ss$/i,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                localIdentName: '[local]_[md5:contenthash:base64:5]',
+                            },
+                            sourceMap: true,
+                        }
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    }
+                ],
             },
         ],
     },
@@ -51,16 +68,13 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: "[name]-[fullhash].css",
-            chunkFilename: "[id].css",
         }),
         new DefinePlugin({
-            PRODUCTION: JSON.stringify(true),
             VERSION: JSON.stringify('5fa3b9'),
-            'process.env': JSON.stringify(process.env),
         })
     ],
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name]-[hash].bundle.js',
         path: path.resolve(__dirname, 'build'),
         assetModuleFilename: 'assets/images/[name]-[hash][ext]',
         clean: true,
@@ -74,7 +88,7 @@ module.exports = {
                     preset: [
                         "default",
                         {
-                            discardComments: { removeAll: true },
+                            discardComments: {removeAll: true},
                         },
                     ],
                 },

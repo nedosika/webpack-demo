@@ -10,10 +10,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/material": "^5.8.1",
-    "lodash": "^4.17.21",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
@@ -34,6 +30,8 @@
     "jest-environment-jsdom": "^28.1.0",
     "jest-transform-css": "^4.0.1",
     "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.52.1",
+    "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
