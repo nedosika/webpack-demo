@@ -40,8 +40,19 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                //use: ['style-loader', 'css-loader'],
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                localIdentName: '[local]_[md5:contenthash:base64:5]',
+                            },
+                            sourceMap: true,
+                        }
+                    },
+                ],
             },
         ],
     },
@@ -51,7 +62,6 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: "[name]-[fullhash].css",
-            chunkFilename: "[id].css",
         }),
         new DefinePlugin({
             VERSION: JSON.stringify('5fa3b9'),
@@ -72,7 +82,7 @@ module.exports = {
                     preset: [
                         "default",
                         {
-                            discardComments: { removeAll: true },
+                            discardComments: {removeAll: true},
                         },
                     ],
                 },
