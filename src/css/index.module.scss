@@ -53,3 +53,7 @@
 body {
   font-family: ProximaNova-Regular;
 }
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  background: none;
+}
