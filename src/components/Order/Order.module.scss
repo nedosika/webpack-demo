@@ -1,0 +1,26 @@
+.root {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  padding: 56px 15px 30px;
+  background-image: url(./pic_1_form.jpg);
+  min-height: 482px;
+  background-position: center;
+  background-size: cover;
+
+  .wrapper {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .title {
+      line-height: 1.625rem;
+      font-size: 1.5em;
+      font-family: ProximaNova-Bold;
+      color: #fff;
+    }
+  }
+}

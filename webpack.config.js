@@ -37,6 +37,16 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'assets/images/[name]-[hash][ext]'
+                }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/fonts/[name][ext]'
+                }
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -76,7 +86,7 @@ module.exports = {
     output: {
         filename: '[name]-[hash].bundle.js',
         path: path.resolve(__dirname, 'build'),
-        assetModuleFilename: 'assets/images/[name]-[hash][ext]',
+        //assetModuleFilename: 'assets/images/[name]-[hash][ext]',
         clean: true,
     },
     optimization: {

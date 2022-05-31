@@ -1,10 +1,12 @@
 import React from 'react';
+import Order from "Components/Order";
+import styles from "./Content.module.scss";
 
 const Content = () => {
     return (
-        <div>
-            
-        </div>
+        <main className={styles.root}>
+            <Order/>
+        </main>
     );
 };
 
