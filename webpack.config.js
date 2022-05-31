@@ -27,11 +27,6 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                    // can be use in .babelrc.js
-                    // options: {
-                    //     presets: ['@babel/preset-react', '@babel/preset-env'],
-                    //     plugins: ['@babel/plugin-transform-runtime'],
-                    // },
                 },
             },
             {

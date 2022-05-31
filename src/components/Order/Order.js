@@ -5,23 +5,27 @@ const Order = () => {
     return (
         <section className={styles.root}>
             <div className={styles.wrapper}>
-                <div className={styles.title}>Автопрокат, якому довіряють!</div>
-                <div className="rate-area">
-                    <span>4.5 / 5</span>
-                    <div className="wrapper">
-                        <div>
-                            <span className="js-star-rating" data-rating="4.5">
-                                <span className="fa fa-star"/>
-                                <span className="fa fa-star"/>
-                                <span className="fa fa-star"/>
-                                <span className="fa fa-star"/>
-                                <span className="fa fa-star-o">
-                                    <span/>
-                                </span>
-                            </span>
-                        </div>
-                    </div>
-                    <span> за <a target="_blank" href="#">Google відгуками</a></span>
+                <h2 className={styles.title}>Автопрокат, якому довіряють!</h2>
+                <div className={styles.rateArea}>
+                    <span>4.5 / 5 </span>
+                    <span>
+                        <span className={styles.star}/>
+                        <span className={styles.star}/>
+                        <span className={styles.star}/>
+                        <span className={styles.star}/>
+                        <span className={styles.emptyStar}>
+                            <span className={styles.percentStar}/>
+                        </span>
+                    </span>
+                    <span>за
+                        <a
+                            className={styles.googleLink}
+                            target="_blank"
+                            href="#"
+                        >
+                            Google відгуками
+                        </a>
+                    </span>
                 </div>
                 <div>
                     <form

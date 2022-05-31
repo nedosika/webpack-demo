@@ -20,6 +20,43 @@
       line-height: 1.625rem;
       font-size: 1.5em;
       font-family: ProximaNova-Bold;
+      color: white;
+    }
+
+    .rateArea {
+      margin: 9px 0 15px;
+      color: white;
+
+      .star{
+        background-image: url(./star.svg);
+        margin: 0 1px;
+
+        position: relative;
+        top: 2px;
+        width: 17px;
+        height: 16px;
+        display: inline-flex;
+      }
+
+      .emptyStar{
+        background-image: url(./star_empty.svg);
+        margin: 0 1px;
+
+        position: relative;
+        top: 2px;
+        width: 17px;
+        height: 16px;
+        display: inline-flex;
+
+        .percentStar {
+          background-image: url(./star.svg);
+          width: 50%;
+        }
+      }
+    }
+
+    .googleLink {
+      text-decoration: underline;
       color: #fff;
     }
   }
