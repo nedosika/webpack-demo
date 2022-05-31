@@ -1,10 +1,11 @@
 .root {
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     right: 0;
     background-color: #fff;
-    padding: 15px 0 15px;
+    padding: 10px 0 10px;
 
     .wrapper {
         display: flex;
@@ -23,6 +24,10 @@
             & > div, & > a {
                 margin: 0 12px;
                 cursor: pointer;
+            }
+
+            .icon {
+                vertical-align: middle;
             }
         }
 

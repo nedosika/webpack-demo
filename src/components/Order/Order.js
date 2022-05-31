@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./Order.module.scss";
+import detailSearchImg from "./assets/plus.svg";
 
 const Order = () => {
     return (
@@ -68,7 +69,7 @@ const Order = () => {
                         <div>
                             <label className={styles.label} htmlFor="time-1">Дата і час видачі</label>
                             <input
-                                className={styles.date}
+                                className={styles.dateInput}
                                 type="datetime-local"
                                 id="time-1"
                                 pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
@@ -80,7 +81,7 @@ const Order = () => {
                         <div>
                             <label className={styles.label} htmlFor="time-2">Дата і час повернення</label>
                             <input
-                                className={styles.date}
+                                className={styles.dateInput}
                                 type="datetime-local"
                                 id="time-2"
                                 pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
@@ -89,19 +90,19 @@ const Order = () => {
                                 min="2022-05-30T14:25"
                             />
                         </div>
-                        <div>
-                            <button type="submit" className="search-avto">Підібрати авто</button>
-                        </div>
-                        <div>
-                            <div id="short-error-message" className="err-msg">Введіть коректні дати</div>
-                            <div className="detail-search">
+                        <div className={styles.detailSearchInput}>
+                            <div className={styles.errorMsg}>Введіть коректні дати</div>
+                            <div className={styles.detailSearch}>
                                 <img
-                                    src=""
+                                    src={detailSearchImg}
                                     width="10"
                                     height="10"
                                 />
                                 Більше опцій
                             </div>
+                        </div>
+                        <div className={styles.submitInput}>
+                            <button type="submit" className={styles.searchAuto}>Підібрати авто</button>
                         </div>
                     </form>
                 </div>

@@ -15,6 +15,7 @@ const Header = () => {
                 <div className={styles.buttons}>
                     <a href="tel:+38 (012) 345 678 90">
                         <img
+                            className={styles.icon}
                             alt="phone"
                             src={phoneImg}
                             width="24"
@@ -22,6 +23,7 @@ const Header = () => {
                     </a>
                     <div>
                         <img
+                            className={styles.icon}
                             alt="location"
                             src={locationImg}
                             width="19"
@@ -29,6 +31,7 @@ const Header = () => {
                     </div>
                     <a href="#">
                         <img
+                            className={styles.icon}
                             alt="account"
                             src={accountImg}
                             width="27"

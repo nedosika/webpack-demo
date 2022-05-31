@@ -4,7 +4,7 @@
   margin-left: auto;
 
   padding: 20px 15px 30px;
-  background-image: url(./pic_1_form.jpg);
+  background-image: url(./assets/pic_1_form.jpg);
   min-height: 482px;
   background-position: center;
   background-size: cover;
@@ -15,6 +15,7 @@
       font-size: 1.5em;
       font-family: ProximaNova-Bold;
       color: white;
+      margin-top: 0;
     }
 
     .rateArea {
@@ -22,7 +23,7 @@
       color: white;
 
       .star{
-        background-image: url(./star.svg);
+        background-image: url(assets/star.svg);
         margin: 0 1px;
 
         position: relative;
@@ -33,7 +34,7 @@
       }
 
       .emptyStar{
-        background-image: url(./star_empty.svg);
+        background-image: url(./assets/star_empty.svg);
         margin: 0 1px;
 
         position: relative;
@@ -43,7 +44,7 @@
         display: inline-flex;
 
         .percentStar {
-          background-image: url(./star.svg);
+          background-image: url(assets/star.svg);
           width: 50%;
         }
       }
@@ -79,13 +80,13 @@
         outline: none;
         width: 100%;
         padding: 0 16px;
-        background-image: url(./location.svg);
+        background-image: url(assets/location.svg);
         background-repeat: no-repeat;
         background-position: calc(100% - 16px) center;
         margin-bottom: 11px;
       }
 
-      .date {
+      .dateInput {
         appearance: none;
         color: #1d252c;
         min-height: 56px;
@@ -96,13 +97,52 @@
         padding: 0 16px;
         max-width: unset!important;
 
-        background-image: url(./calendar.svg);
+        background-image: url(assets/calendar.svg);
         background-color: #fff;
         background-repeat: no-repeat;
         background-position-y: center;
         background-position-x: calc(100% - 16px);
 
         margin-bottom: 11px;
+      }
+
+      .detailSearchInput {
+
+        .detailSearch {
+          color: #ff5100;
+          max-width: 166px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          text-decoration: underline;
+          margin-top: 0;
+          margin-bottom: 18px;
+
+          & > img {
+            margin-right: 6px;
+          }
+        }
+
+        .errorMsg {
+          color: #dc3232;
+        }
+      }
+
+      .submitInput {
+        max-width: 169px;
+
+        .searchAuto {
+          transition: 0.3s ease;
+          cursor: pointer;
+          min-height: 46px;
+          max-width: 230px;
+          width: 100%;
+          outline: none;
+          border: none;
+          font-family: ProximaNova-Semibold;
+          color: #fff;
+          background-color: #ff5100;
+        }
       }
     }
   }
