@@ -1,7 +1,5 @@
 .root {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
 
   padding: 20px 15px 30px;
   background-image: url(./assets/pic_1_form.jpg);
@@ -10,6 +8,10 @@
   background-size: cover;
 
   .wrapper {
+    max-width: 1230px;
+    margin-left: auto;
+    margin-right: auto;
+
     .title {
       line-height: 1.625rem;
       font-size: 1.5em;
@@ -22,7 +24,7 @@
       margin: 9px 0 15px;
       color: white;
 
-      .star{
+      .star {
         background-image: url(assets/star.svg);
         margin: 0 1px;
 
@@ -33,7 +35,7 @@
         display: inline-flex;
       }
 
-      .emptyStar{
+      .emptyStar {
         background-image: url(./assets/star_empty.svg);
         margin: 0 1px;
 
@@ -95,7 +97,7 @@
         outline: none;
         position: relative;
         padding: 0 16px;
-        max-width: unset!important;
+        max-width: unset !important;
 
         background-image: url(assets/calendar.svg);
         background-color: #fff;

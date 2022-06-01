@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="38">
+    <style>.st0{enable - background:new}</style>
+    <switch>
+        <g>
+            <g id="Rectangle_1_copy_6_1_" class="st0">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff"
+                      d="M0-.006h60v38.001H0z" id="Rectangle_1_copy_6"/>
+            </g>
+            <g id="Shape_3_copy_4_1_" class="st0">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#ff5f00"
+                      d="M24.877 10.282h10.246v17.427H24.877z"
+                      id="Shape_3_copy_4"/>
+            </g>
+            <g id="Shape_3_copy_5_1_" class="st0">
+                <path
+                        d="M25.527 18.995c0-3.541 1.756-6.681 4.456-8.713a12.058 12.058 0 00-7.221-2.37c-6.473 0-11.71 4.956-11.71 11.084 0 6.126 5.237 11.083 11.71 11.083a12.07 12.07 0 007.221-2.369c-2.699-2.003-4.456-5.174-4.456-8.715z"
+                        fill-rule="evenodd" clip-rule="evenodd" fill="#ec1c2e"
+                        id="Shape_3_copy_5"/>
+            </g>
+            <g id="Shape_3_copy_6_1_" class="st0">
+                <path
+                        d="M37.237 7.912c-2.732 0-5.237.892-7.221 2.37 2.7 2.032 4.456 5.172 4.456 8.713 0 3.54-1.724 6.681-4.456 8.714a12.063 12.063 0 007.221 2.369c6.473 0 11.71-4.957 11.71-11.083 0-6.097-5.237-11.083-11.71-11.083z"
+                        fill-rule="evenodd" clip-rule="evenodd" fill="#f79e1b"
+                        id="Shape_3_copy_6"/>
+            </g>
+        </g>
+    </switch>
+</svg>
