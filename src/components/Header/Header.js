@@ -5,7 +5,7 @@ import phoneImg from "./assets/phone_2.svg";
 import locationImg from "./assets/location.svg";
 import accountImg from "./assets/my_account.svg";
 
-const Header = () => {
+const Header = ({onShowMenu}) => {
     return (
         <header className={styles.root}>
             <div className={styles.wrapper}>
@@ -38,7 +38,7 @@ const Header = () => {
                         />
                     </a>
                 </div>
-                <div className={styles.menu}>
+                <div className={styles.menu} onClick={onShowMenu}>
                     <svg className="open" xmlns="http://www.w3.org/2000/svg" width="30" height="22">
                         <switch>
                             <g>
