@@ -60,55 +60,85 @@
     .search {
       background-color: #fff;
       padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
 
       .formName {
         font-size: 1.25em;
         font-family: ProximaNova-Bold;
         color: #1d252c;
         margin-bottom: 10px;
-      }
+        padding-left: 5px;
+        padding-right: 5px;
 
-      .label {
-        display: block;
-        font-family: ProximaNova-Semibold;
-        margin-bottom: 5px;
+        flex: 0 0 100%;
+        max-width: 100%;
       }
 
       .selectInput {
-        appearance: none;
-        color: #1d252c;
-        min-height: 56px;
-        border: 1px solid #d3d3d3;
-        outline: none;
-        width: 100%;
-        padding: 0 16px;
-        background-image: url(assets/location.svg);
-        background-repeat: no-repeat;
-        background-position: calc(100% - 16px) center;
-        margin-bottom: 11px;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        label {
+          display: block;
+          font-family: ProximaNova-Semibold;
+          margin-bottom: 5px;
+        }
+
+        select {
+          appearance: none;
+          color: #1d252c;
+          min-height: 56px;
+          border: 1px solid #d3d3d3;
+          outline: none;
+          width: 100%;
+          padding: 0 16px;
+          background-image: url(assets/location.svg);
+          background-repeat: no-repeat;
+          background-position: calc(100% - 16px) center;
+        }
       }
 
       .dateInput {
-        appearance: none;
-        color: #1d252c;
-        min-height: 56px;
-        border: 1px solid #d3d3d3;
-        width: 100%;
-        outline: none;
-        position: relative;
-        padding: 0 16px;
-        max-width: unset !important;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
 
-        background-image: url(assets/calendar.svg);
-        background-color: #fff;
-        background-repeat: no-repeat;
-        background-position-y: center;
-        background-position-x: calc(100% - 16px);
+        label {
+          display: block;
+          font-family: ProximaNova-Semibold;
+          margin-bottom: 5px;
+        }
 
-        margin-bottom: 11px;
+        input {
+          appearance: none;
+          color: #1d252c;
+          min-height: 56px;
+          border: 1px solid #d3d3d3;
+          width: 100%;
+          outline: none;
+          position: relative;
+          padding: 0 16px;
+          max-width: unset !important;
+
+          background-image: url(assets/calendar.svg);
+          background-color: #fff;
+          background-repeat: no-repeat;
+          background-position-y: center;
+          background-position-x: calc(100% - 16px);
+        }
       }
 
       .detailSearchInput {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        order: 5;
 
         .detailSearch {
           color: #ff5100;
@@ -118,9 +148,8 @@
           align-items: center;
           text-decoration: underline;
           margin-top: 0;
-          margin-bottom: 18px;
 
-          & > img {
+          img {
             margin-right: 6px;
           }
         }
@@ -132,11 +161,17 @@
 
       .submitInput {
         max-width: 169px;
+        align-items: flex-end;
+        display: flex;
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 100%;
+        order: 6;
 
-        .searchAuto {
+        button {
           transition: 0.3s ease;
           cursor: pointer;
-          min-height: 46px;
+          min-height: 56px;
           max-width: 230px;
           width: 100%;
           outline: none;
@@ -144,6 +179,61 @@
           font-family: ProximaNova-Semibold;
           color: #fff;
           background-color: #ff5100;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .root {
+    .wrapper {
+      .search {
+        .selectInput {
+          flex-basis: 0;
+          flex-grow: 1;
+          max-width: 100%;
+        }
+
+        .dateInput {
+          flex: 0 0 auto;
+          width: auto;
+          max-width: 100%;
+        }
+
+        .detailSearchInput{
+          order: 6;
+        }
+
+        .submitInput {
+          max-width: 169px;
+          order: 5;
+          flex-basis: 0;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .root {
+    .wrapper {
+      .search {
+        .selectInput {
+          margin-bottom: 11px;
+        }
+
+        .dateInput {
+          margin-bottom: 11px;
+        }
+
+        .detailSearchInput{
+          margin-bottom: 11px;
+        }
+
+        .submitInput {
+          margin-bottom: 11px;
         }
       }
     }

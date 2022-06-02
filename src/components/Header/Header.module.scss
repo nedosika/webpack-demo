@@ -29,11 +29,72 @@
             .icon {
                 vertical-align: middle;
             }
+
+            //@media (min-width: 991px){
+            //    display: none;
+            //}
+        }
+
+        .mobileHide{
+            display: flex;
+            align-items: center;
+
+            .citySelect {
+                border: none;
+                font-family: ProximaNova-Semibold;
+                margin-left: 3px;
+                outline: none;
+                cursor: pointer;
+            }
+
+            .social {
+                & a {
+                    margin: 0 4px;
+                }
+            }
+
+            & > img {
+                margin-right: 10px;
+            }
+
+            & a {
+                font-family: ProximaNova-Semibold;
+                font-size: 1em;
+                color: #1d252c;
+                text-decoration: none;
+            }
         }
 
         .menu {
             margin-left: 30px;
             cursor: pointer;
+
+            //@media (min-width: 991px){
+            //    display: none;
+            //}
+        }
+    }
+}
+
+@media (min-width: 991px){
+    .root{
+        .wrapper {
+            .buttons {
+                display: none;
+            }
+            .menu {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .root{
+        .wrapper {
+            .mobileHide {
+                display: none;
+            }
         }
     }
 }

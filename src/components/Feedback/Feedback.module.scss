@@ -1,0 +1,11 @@
+.root{
+  position: fixed;
+  bottom: 53px;
+  right: 74px;
+  z-index: 99;
+
+  .phone{
+    margin-bottom: 11px;
+    cursor: pointer;
+  }
+}

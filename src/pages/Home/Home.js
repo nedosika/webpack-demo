@@ -3,6 +3,7 @@ import Header from "Components/Header";
 import Content from "Components/Content";
 import Footer from "Components/Footer";
 import Menu from "Components/Menu";
+import Feedback from "Components/Feedback/Feedback";
 
 const Home = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,6 +13,7 @@ const Home = () => {
             <Content/>
             <Footer/>
             <Menu open={isMenuOpen} onClose={() => setIsMenuOpen(false)}/>
+            <Feedback/>
         </>
     );
 };
