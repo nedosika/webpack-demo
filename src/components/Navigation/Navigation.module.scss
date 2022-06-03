@@ -1,0 +1,48 @@
+@import "./src/css/media_endpoints";
+@import "./src/css/colors";
+
+.root{
+  padding-bottom: 30px;
+
+  .wrapper{
+    max-width: 1230px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      margin-top: 0;
+
+      li {
+        display: inline-flex;
+        position: relative;
+
+        a {
+          transition: 0.3s ease;
+          font-size: 0.875em;
+          text-transform: uppercase;
+          font-family: ProximaNova-Semibold;
+          color: $font;
+          text-decoration: none;
+          background-color: transparent;
+          margin: 0 5px;
+
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop){
+  .root{
+    display: none;
+  }
+}

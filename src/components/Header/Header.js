@@ -9,8 +9,8 @@ const Header = ({onShowMenu}) => {
     return (
         <header className={styles.root}>
             <div className={styles.wrapper}>
-                <a href="#">
-                    <img alt="logo" src={logoImg} width="106"/>
+                <a href="#" className={styles.logo}>
+                    <img alt="logo" src={logoImg} width="167"/>
                 </a>
                 <div className={styles.buttons}>
                     <a href="tel:+38 (012) 345 678 90">

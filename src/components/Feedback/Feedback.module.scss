@@ -1,3 +1,5 @@
+@import "./src/css/media_endpoints";
+
 .root{
   position: fixed;
   bottom: 53px;
@@ -7,5 +9,12 @@
   .phone{
     margin-bottom: 11px;
     cursor: pointer;
+  }
+}
+
+@media (max-width: $desktop){
+  .root{
+    bottom: 30px;
+    right: 30px;
   }
 }

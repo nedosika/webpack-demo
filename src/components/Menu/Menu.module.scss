@@ -1,3 +1,5 @@
+@import "./src/css/colors";
+
 .menu{
   position: fixed;
   background-color: #fff;
@@ -6,6 +8,60 @@
   bottom: 0;
   width: 83%;
   max-width: 314px;
+
+  .language {
+    border-top: 2px solid #f6f6f6;
+    padding: 9px 0 13px;
+
+    span {
+      margin: 0 8px;
+    }
+  }
+
+  .exchange{
+    border-top: 2px solid #f6f6f6;
+    padding: 9px 0 13px;
+
+    .value{
+      font-family: ProximaNova-Semibold;
+      font-size: 0.875em;
+    }
+
+    .curs{
+      font-family: ProximaNova-Regular;
+      float: right;
+      position: relative;
+      bottom: -2px;
+      font-size: 0.875em;
+    }
+
+    span{
+      margin: 0 8px;
+    }
+  }
+
+  .active{
+    border-bottom: 2px solid $orange;
+  }
+
+  ul {
+    list-style: none;
+    padding: 13px 15px 0;
+
+    li {
+      margin: 8px 0;
+      cursor: pointer;
+
+      a{
+        font-family: ProximaNova-Semibold;
+        font-size: 0.875em;
+        color: $font;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: transparent;
+      }
+    }
+  }
 }
 
 .bg{

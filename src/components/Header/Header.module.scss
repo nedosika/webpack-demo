@@ -1,101 +1,107 @@
+@import "./src/css/media_endpoints";
+@import "./src/css/colors";
+
 .root {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    padding: 10px 0 10px;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  padding: 10px 0 10px;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    .buttons {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+
+      div, a {
+        margin: 0 12px;
+        cursor: pointer;
+      }
+
+      .icon {
+        vertical-align: middle;
+      }
+    }
+
+    .mobileHide {
+      display: flex;
+      align-items: center;
+
+      .citySelect {
+        border: none;
+        font-family: ProximaNova-Semibold;
+        margin-left: 3px;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .social {
+        display: inline-flex;
+        a {
+          margin: 0 4px;
+        }
+
+        img {
+          vertical-align: middle;
+        }
+      }
+
+      & > img {
+        margin-right: 10px;
+      }
+
+      & > a {
+        font-family: ProximaNova-Semibold;
+        font-size: 1em;
+        color: $font;
+        text-decoration: none;
+      }
+    }
+
+    .menu {
+      margin-left: 30px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .root {
+    padding: 30px 0;
+    position: static;
 
     .wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 1230px;
-        padding: 0 15px;
-        margin: 0 auto;
-
-        .buttons {
-            display: flex;
-            width: 100%;
-            justify-content: flex-end;
-
-            & > div, & > a {
-                margin: 0 12px;
-                cursor: pointer;
-            }
-
-            .icon {
-                vertical-align: middle;
-            }
-
-            //@media (min-width: 991px){
-            //    display: none;
-            //}
-        }
-
-        .mobileHide{
-            display: flex;
-            align-items: center;
-
-            .citySelect {
-                border: none;
-                font-family: ProximaNova-Semibold;
-                margin-left: 3px;
-                outline: none;
-                cursor: pointer;
-            }
-
-            .social {
-                & a {
-                    margin: 0 4px;
-                }
-            }
-
-            & > img {
-                margin-right: 10px;
-            }
-
-            & a {
-                font-family: ProximaNova-Semibold;
-                font-size: 1em;
-                color: #1d252c;
-                text-decoration: none;
-            }
-        }
-
-        .menu {
-            margin-left: 30px;
-            cursor: pointer;
-
-            //@media (min-width: 991px){
-            //    display: none;
-            //}
-        }
+      .buttons, .menu {
+        display: none;
+      }
     }
+  }
 }
 
-@media (min-width: 991px){
-    .root{
-        .wrapper {
-            .buttons {
-                display: none;
-            }
-            .menu {
-                display: none;
-            }
-        }
-    }
-}
+@media (max-width: $desktop) {
+  .root {
+    .wrapper {
+      .mobileHide {
+        display: none;
+      }
 
-@media (max-width: 991px){
-    .root{
-        .wrapper {
-            .mobileHide {
-                display: none;
-            }
+      .logo {
+        img {
+          width: 106px;
         }
+      }
     }
+  }
 }
 

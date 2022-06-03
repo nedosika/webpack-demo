@@ -1,3 +1,6 @@
+@import "../../css/media_endpoints";
+@import "../../css/colors";
+
 .root {
   width: 100%;
 
@@ -22,7 +25,7 @@
 
     .rateArea {
       margin: 9px 0 15px;
-      color: white;
+      color: $white;
 
       .star {
         background-image: url(assets/star.svg);
@@ -53,12 +56,12 @@
 
       .googleLink {
         text-decoration: underline;
-        color: #fff;
+        color: $white;
       }
     }
 
     .search {
-      background-color: #fff;
+      background-color: $white;
       padding: 20px;
       display: flex;
       flex-wrap: wrap;
@@ -66,7 +69,7 @@
       .formName {
         font-size: 1.25em;
         font-family: ProximaNova-Bold;
-        color: #1d252c;
+        color: $font;
         margin-bottom: 10px;
         padding-left: 5px;
         padding-right: 5px;
@@ -89,9 +92,9 @@
 
         select {
           appearance: none;
-          color: #1d252c;
+          color: $font;
           min-height: 56px;
-          border: 1px solid #d3d3d3;
+          border: 1px solid $grey;
           outline: none;
           width: 100%;
           padding: 0 16px;
@@ -115,9 +118,9 @@
 
         input {
           appearance: none;
-          color: #1d252c;
+          color: $font;
           min-height: 56px;
-          border: 1px solid #d3d3d3;
+          border: 1px solid $grey;
           width: 100%;
           outline: none;
           position: relative;
@@ -125,7 +128,7 @@
           max-width: unset !important;
 
           background-image: url(assets/calendar.svg);
-          background-color: #fff;
+          background-color: $white;
           background-repeat: no-repeat;
           background-position-y: center;
           background-position-x: calc(100% - 16px);
@@ -141,7 +144,7 @@
         order: 5;
 
         .detailSearch {
-          color: #ff5100;
+          color: $orange;
           max-width: 166px;
           cursor: pointer;
           display: flex;
@@ -155,7 +158,7 @@
         }
 
         .errorMsg {
-          color: #dc3232;
+          color: $error;
         }
       }
 
@@ -177,18 +180,32 @@
           outline: none;
           border: none;
           font-family: ProximaNova-Semibold;
-          color: #fff;
-          background-color: #ff5100;
+          color: $white;
+          background-color: $search_auto_btn;
         }
       }
     }
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $desktop) {
   .root {
+    padding-top: 56px;
+
     .wrapper {
+      .title {
+        font-size: 2.25em;
+      }
+
+      .rateArea{
+        margin-bottom: 30px;
+      }
+
       .search {
+        .formName {
+          margin-bottom: 25px;
+        }
+
         .selectInput {
           flex-basis: 0;
           flex-grow: 1;
@@ -201,7 +218,7 @@
           max-width: 100%;
         }
 
-        .detailSearchInput{
+        .detailSearchInput {
           order: 6;
         }
 
@@ -216,23 +233,11 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: $desktop) {
   .root {
     .wrapper {
       .search {
-        .selectInput {
-          margin-bottom: 11px;
-        }
-
-        .dateInput {
-          margin-bottom: 11px;
-        }
-
-        .detailSearchInput{
-          margin-bottom: 11px;
-        }
-
-        .submitInput {
+        .selectInput, .dateInput, .detailSearchInput, .submitInput {
           margin-bottom: 11px;
         }
       }

@@ -1,3 +1,5 @@
+@import "../../css/media_endpoints";
+
 .root{
   background-color: #1d252c;
   padding-top: 40px;
@@ -106,6 +108,19 @@
           color: #acacac;
           margin-top: 0;
           font-size: 0.875em;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .root{
+    .wrapper {
+      .row{
+        .col{
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%;
         }
       }
     }
