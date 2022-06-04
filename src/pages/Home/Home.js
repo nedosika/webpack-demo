@@ -11,11 +11,10 @@ const Home = () => {
     return (
         <>
             <Header onShowMenu={() => setIsMenuOpen(true)}/>
-            <Navigation/>
             <Content/>
             <Footer/>
-            <Menu open={isMenuOpen} onClose={() => setIsMenuOpen(false)}/>
             <Feedback/>
+            <Menu open={isMenuOpen} onClose={() => setIsMenuOpen(false)}/>
         </>
     );
 };

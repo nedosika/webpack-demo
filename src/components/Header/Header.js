@@ -4,10 +4,13 @@ import logoImg from "./assets/logotype.svg";
 import phoneImg from "./assets/phone_2.svg";
 import locationImg from "./assets/location.svg";
 import accountImg from "./assets/my_account.svg";
+import Info from "Components/Info";
+import Navigation from "Components/Navigation";
 
 const Header = ({onShowMenu}) => {
     return (
         <header className={styles.root}>
+            <Info/>
             <div className={styles.wrapper}>
                 <a href="#" className={styles.logo}>
                     <img alt="logo" src={logoImg} width="167"/>
@@ -106,6 +109,7 @@ const Header = ({onShowMenu}) => {
                     </svg>
                 </div>
             </div>
+            <Navigation/>
         </header>
     );
 };

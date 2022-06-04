@@ -8,7 +8,6 @@
   left: 0;
   right: 0;
   background-color: $white;
-  padding: 10px 0 10px;
 
   .wrapper {
     display: flex;
@@ -16,7 +15,7 @@
     align-items: center;
     width: 100%;
     max-width: 1230px;
-    padding: 0 15px;
+    padding: 10px;
     margin: 0 auto;
 
     .buttons {
@@ -48,6 +47,7 @@
 
       .social {
         display: inline-flex;
+
         a {
           margin: 0 4px;
         }
@@ -73,15 +73,18 @@
       margin-left: 30px;
       cursor: pointer;
     }
+
+    .logo {
+
+    }
   }
 }
 
 @media (min-width: $desktop) {
   .root {
-    padding: 30px 0;
-    position: static;
-
     .wrapper {
+      padding: 30px 15px;
+
       .buttons, .menu {
         display: none;
       }
