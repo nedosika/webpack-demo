@@ -34,8 +34,8 @@
     }
 
     .mobileHide {
-      display: flex;
       align-items: center;
+      display: none;
 
       .citySelect {
         border: none;
@@ -57,11 +57,11 @@
         }
       }
 
-      & > img {
+      img {
         margin-right: 10px;
       }
 
-      & > a {
+      a {
         font-family: ProximaNova-Semibold;
         font-size: 1em;
         color: $font;
@@ -77,6 +77,7 @@
     .logo {
       img {
         vertical-align: middle;
+        width: 106px;
       }
     }
   }
@@ -87,24 +88,18 @@
     .wrapper {
       padding: 30px 15px;
 
+      .logo {
+        img{
+          width: 167px;
+        }
+      }
+
+      .mobileHide{
+        display: flex;
+      }
+
       .buttons, .menu {
         display: none;
-      }
-    }
-  }
-}
-
-@media (max-width: $tablet) {
-  .root {
-    .wrapper {
-      .mobileHide {
-        display: none;
-      }
-
-      .logo {
-        img {
-          width: 106px;
-        }
       }
     }
   }
