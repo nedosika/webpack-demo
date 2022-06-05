@@ -4,8 +4,8 @@ import logoImg from "./assets/logotype.svg";
 import phoneImg from "./assets/phone_2.svg";
 import locationImg from "./assets/location.svg";
 import accountImg from "./assets/my_account.svg";
-import Info from "Components/Info";
-import Navigation from "Components/Navigation";
+import Info from "Components/Header/Info";
+import Navigation from "Components/Header/Navigation";
 
 const Header = ({onShowMenu}) => {
     return (

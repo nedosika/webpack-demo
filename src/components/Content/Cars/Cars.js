@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./Cars.module.scss";
-import Car from "Components/Cars/Car";
+import Car from "Components/Content/Cars/Car";
 import econom from "./assets/econom.jpg";
 import business from "./assets/business.jpg";
 import middle from "./assets/middle.jpg";

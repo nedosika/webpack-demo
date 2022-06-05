@@ -1,12 +1,12 @@
-@import "src/css/media_endpoints";
-@import "src/css/consts";
-@import "src/css/colors";
+@import "../../../css/media_endpoints";
+@import "../../../css/consts";
+@import "../../../css/colors";
 
 .root {
   width: 100%;
 
   padding: 20px 15px 30px;
-  background-image: url(./assets/pic_1_form.jpg);
+  background-image: url(assets/pic_1_form.jpg);
   min-height: 482px;
   background-position: center;
   background-size: cover;
@@ -40,7 +40,7 @@
       }
 
       .emptyStar {
-        background-image: url(./assets/star_empty.svg);
+        background-image: url(assets/star_empty.svg);
         margin: 0 1px;
 
         position: relative;

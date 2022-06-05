@@ -4,7 +4,7 @@ import Content from "Components/Content";
 import Footer from "Components/Footer";
 import Menu from "Components/Menu";
 import Feedback from "Components/Feedback/Feedback";
-import Navigation from "Components/Navigation";
+import Navigation from "Components/Header/Navigation";
 
 const Home = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
