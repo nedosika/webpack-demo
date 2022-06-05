@@ -1,10 +1,10 @@
 @import "./src/css/media_endpoints";
 @import "./src/css/colors";
 
-.root{
+.root {
   padding-bottom: 30px;
 
-  .wrapper{
+  .wrapper {
     max-width: 1230px;
     width: 100%;
     padding-right: 15px;
@@ -30,7 +30,7 @@
           color: $font;
           text-decoration: none;
           background-color: transparent;
-          margin: 0 5px;
+          margin: 0 17px;
 
           &:hover {
             color: $orange;
@@ -41,8 +41,22 @@
   }
 }
 
-@media (max-width: $desktop){
-  .root{
+@media (max-width: $tablet) {
+  .root {
     display: none;
+  }
+}
+
+@media (max-width: $desktop) {
+  .root {
+    .wrapper {
+      ul {
+        li {
+          a {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
   }
 }

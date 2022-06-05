@@ -1,5 +1,6 @@
-@import "../../css/media_endpoints";
-@import "../../css/colors";
+@import "src/css/media_endpoints";
+@import "src/css/consts";
+@import "src/css/colors";
 
 .root {
   width: 100%;
@@ -11,7 +12,7 @@
   background-size: cover;
 
   .wrapper {
-    max-width: 1230px;
+    max-width: $max-width;
     margin-left: auto;
     margin-right: auto;
 
@@ -20,7 +21,7 @@
       font-size: 1.5em;
       font-family: ProximaNova-Bold;
       color: white;
-      margin-top: 0;
+      margin: 0;
     }
 
     .rateArea {
@@ -62,7 +63,7 @@
 
     .search {
       background-color: $white;
-      padding: 20px;
+      padding: 0 15px 27px;
       display: flex;
       flex-wrap: wrap;
 
@@ -70,9 +71,8 @@
         font-size: 1.25em;
         font-family: ProximaNova-Bold;
         color: $font;
-        margin-bottom: 10px;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding: 0px 5px;
+        margin: 10px 0 6px;
 
         flex: 0 0 100%;
         max-width: 100%;
@@ -81,8 +81,7 @@
       .selectInput {
         flex: 0 0 100%;
         max-width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding: 0 5px;
 
         label {
           display: block;
@@ -101,14 +100,15 @@
           background-image: url(assets/location.svg);
           background-repeat: no-repeat;
           background-position: calc(100% - 16px) center;
+          margin-bottom: 11px;
         }
       }
 
       .dateInput {
         flex: 0 0 100%;
         max-width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
+        width: auto;
+        padding: 0 5px;
 
         label {
           display: block;
@@ -132,16 +132,16 @@
           background-repeat: no-repeat;
           background-position-y: center;
           background-position-x: calc(100% - 16px);
+
+          margin-bottom: 11px;
         }
       }
 
       .detailSearchInput {
         flex: 0 0 100%;
         max-width: 100%;
-        padding-left: 5px;
-        padding-right: 5px;
-
-        order: 5;
+        padding: 0px 5px;
+        margin-bottom: 18px;
 
         .detailSearch {
           color: $orange;
@@ -166,15 +166,15 @@
         max-width: 169px;
         align-items: flex-end;
         display: flex;
-        padding-left: 5px;
-        padding-right: 5px;
         width: 100%;
-        order: 6;
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 0px 5px;
 
         button {
           transition: 0.3s ease;
           cursor: pointer;
-          min-height: 56px;
+          min-height: 46px;
           max-width: 230px;
           width: 100%;
           outline: none;
@@ -182,6 +182,49 @@
           font-family: ProximaNova-Semibold;
           color: $white;
           background-color: $search_auto_btn;
+
+          margin-bottom: 11px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .root {
+    padding: 56px 15px 30px;
+
+    .wrapper {
+
+      .title {
+        font-size: 2.25em;
+        line-height: 1.5;
+      }
+
+      .rateArea{
+        margin: 11px 0 30px;
+      }
+
+      .search {
+        .selectInput, .dateInput, .submitInput {
+          flex-basis: 0;
+          flex-grow: 1;
+        }
+
+        .formName {
+          margin: 18px 0 25px;
+        }
+
+        .detailSearchInput{
+          order: 6;
+        }
+
+        .submitInput {
+          order: 5;
+
+          button{
+            min-height: 56px;
+          }
         }
       }
     }
@@ -190,55 +233,10 @@
 
 @media (min-width: $desktop) {
   .root {
-    padding-top: 56px;
-
     .wrapper {
-      .title {
-        font-size: 2.25em;
-      }
-
-      .rateArea{
-        margin-bottom: 30px;
-      }
-
       .search {
-        .formName {
-          margin-bottom: 25px;
-        }
-
-        .selectInput {
-          flex-basis: 0;
-          flex-grow: 1;
-          max-width: 100%;
-        }
-
-        .dateInput {
-          flex: 0 0 auto;
-          width: auto;
-          max-width: 100%;
-        }
-
-        .detailSearchInput {
-          order: 6;
-        }
-
         .submitInput {
-          max-width: 169px;
-          order: 5;
-          flex-basis: 0;
-          flex-grow: 1;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: $desktop) {
-  .root {
-    .wrapper {
-      .search {
-        .selectInput, .dateInput, .detailSearchInput, .submitInput {
-          margin-bottom: 11px;
+          max-width: 230px;
         }
       }
     }

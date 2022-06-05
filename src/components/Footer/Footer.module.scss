@@ -1,7 +1,8 @@
 @import "../../css/media_endpoints";
+@import "./src/css/colors";
 
 .root{
-  background-color: #1d252c;
+  background-color: $black;
   padding-top: 40px;
 
   .wrapper {
@@ -43,7 +44,7 @@
         }
 
         .mainText {
-          color: #fff;
+          color: $white;
           font-size: 1em;
           font-family: ProximaNova-Bold;
           margin: 20px 0 18px;
@@ -51,7 +52,7 @@
           &:after {
             content: "";
             width: 60px;
-            border-bottom: 5px solid #ff5100;
+            border-bottom: 5px solid $orange;
             display: block;
             margin-top: 7px;
           }
@@ -114,7 +115,7 @@
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $mobile) {
   .root{
     .wrapper {
       .row{

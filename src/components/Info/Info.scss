@@ -29,7 +29,7 @@
     }
 
     a {
-      color: #fff;
+      color: $white;
       font-size: 0.875em;
       margin-left: 26px;
       text-decoration: none;
@@ -47,7 +47,7 @@
         .lang {
           cursor: pointer;
           font-size: 0.875em;
-          color: #fff;
+          color: $white;
           margin: 0 10px;
 
           &:after {
@@ -75,7 +75,7 @@
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $tablet) {
   .root {
     display: block;
   }

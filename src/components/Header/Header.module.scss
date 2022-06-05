@@ -15,7 +15,7 @@
     align-items: center;
     width: 100%;
     max-width: 1230px;
-    padding: 10px;
+    padding: 10px 15px;
     margin: 0 auto;
 
     .buttons {
@@ -75,12 +75,14 @@
     }
 
     .logo {
-
+      img {
+        vertical-align: middle;
+      }
     }
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $tablet) {
   .root {
     .wrapper {
       padding: 30px 15px;
@@ -92,7 +94,7 @@
   }
 }
 
-@media (max-width: $desktop) {
+@media (max-width: $tablet) {
   .root {
     .wrapper {
       .mobileHide {
