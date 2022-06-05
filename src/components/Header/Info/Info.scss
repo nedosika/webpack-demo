@@ -1,0 +1,82 @@
+@import "../../../css/colors";
+@import "../../../css/consts";
+@import "../../../css/media_endpoints";
+
+.root {
+  border-bottom: 1px solid $light-grey;
+  padding: 12px 0;
+  background-color: $black;
+  display: none;
+
+  .wrapper {
+    color: $white;
+    max-width: $max-width;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .workingTime {
+      font-size: 0.875em;
+    }
+
+    img {
+      margin-right: 8px;
+      margin-top: -4px;
+      vertical-align: middle;
+      border-style: none;
+    }
+
+    a {
+      color: $white;
+      font-size: 0.875em;
+      margin-left: 26px;
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    .floatRight {
+      display: flex;
+      align-items: center;
+      float: right !important;
+
+      .dropArea {
+        position: relative;
+
+        .lang {
+          cursor: pointer;
+          font-size: 0.875em;
+          color: $white;
+          margin: 0 10px;
+
+          &:after {
+            background-repeat: no-repeat;
+            margin: 0 0 -1px 8px;
+            content: "";
+            width: 11px;
+            height: 7px;
+            display: inline-block;
+            background-image: url(assets/img/arrow.svg);
+          }
+        }
+      }
+
+      .curs {
+        font-size: 0.875em;
+        margin-left: 20px;
+      }
+
+      a {
+        font-size: 0.875em;
+        margin-left: 26px;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .root {
+    display: block;
+  }
+}

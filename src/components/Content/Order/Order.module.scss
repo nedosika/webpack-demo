@@ -1,0 +1,244 @@
+@import "../../../css/media_endpoints";
+@import "../../../css/consts";
+@import "../../../css/colors";
+
+.root {
+  width: 100%;
+
+  padding: 20px 15px 30px;
+  background-image: url(assets/pic_1_form.jpg);
+  min-height: 482px;
+  background-position: center;
+  background-size: cover;
+
+  .wrapper {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+
+    .title {
+      line-height: 1.625rem;
+      font-size: 1.5em;
+      font-family: ProximaNova-Bold;
+      color: white;
+      margin: 0;
+    }
+
+    .rateArea {
+      margin: 9px 0 15px;
+      color: $white;
+
+      .star {
+        background-image: url(assets/star.svg);
+        margin: 0 1px;
+
+        position: relative;
+        top: 2px;
+        width: 17px;
+        height: 16px;
+        display: inline-flex;
+      }
+
+      .emptyStar {
+        background-image: url(assets/star_empty.svg);
+        margin: 0 1px;
+
+        position: relative;
+        top: 2px;
+        width: 17px;
+        height: 16px;
+        display: inline-flex;
+
+        .percentStar {
+          background-image: url(assets/star.svg);
+          width: 50%;
+        }
+      }
+
+      .googleLink {
+        text-decoration: underline;
+        color: $white;
+      }
+    }
+
+    .search {
+      background-color: $white;
+      padding: 0 15px 27px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .formName {
+        font-size: 1.25em;
+        font-family: ProximaNova-Bold;
+        color: $font;
+        padding: 0px 5px;
+        margin: 10px 0 6px;
+
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .selectInput {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 5px;
+
+        label {
+          display: block;
+          font-family: ProximaNova-Semibold;
+          margin-bottom: 5px;
+        }
+
+        select {
+          appearance: none;
+          color: $font;
+          min-height: 56px;
+          border: 1px solid $grey;
+          outline: none;
+          width: 100%;
+          padding: 0 16px;
+          background-image: url(assets/location.svg);
+          background-repeat: no-repeat;
+          background-position: calc(100% - 16px) center;
+          margin-bottom: 11px;
+        }
+      }
+
+      .dateInput {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: auto;
+        padding: 0 5px;
+
+        label {
+          display: block;
+          font-family: ProximaNova-Semibold;
+          margin-bottom: 5px;
+        }
+
+        input {
+          appearance: none;
+          color: $font;
+          min-height: 56px;
+          border: 1px solid $grey;
+          width: 100%;
+          outline: none;
+          position: relative;
+          padding: 0 16px;
+          max-width: unset !important;
+
+          background-image: url(assets/calendar.svg);
+          background-color: $white;
+          background-repeat: no-repeat;
+          background-position-y: center;
+          background-position-x: calc(100% - 16px);
+
+          margin-bottom: 11px;
+        }
+      }
+
+      .detailSearchInput {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0px 5px;
+        margin-bottom: 18px;
+
+        .detailSearch {
+          color: $orange;
+          max-width: 166px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          text-decoration: underline;
+          margin-top: 0;
+
+          img {
+            margin-right: 6px;
+          }
+        }
+
+        .errorMsg {
+          color: $error;
+        }
+      }
+
+      .submitInput {
+        max-width: 169px;
+        align-items: flex-end;
+        display: flex;
+        width: 100%;
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 0px 5px;
+
+        button {
+          transition: 0.3s ease;
+          cursor: pointer;
+          min-height: 46px;
+          max-width: 230px;
+          width: 100%;
+          outline: none;
+          border: none;
+          font-family: ProximaNova-Semibold;
+          color: $white;
+          background-color: $search_auto_btn;
+
+          margin-bottom: 11px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .root {
+    padding: 56px 15px 30px;
+
+    .wrapper {
+
+      .title {
+        font-size: 2.25em;
+        line-height: 1.5;
+      }
+
+      .rateArea{
+        margin: 11px 0 30px;
+      }
+
+      .search {
+        .selectInput, .dateInput, .submitInput {
+          flex-basis: 0;
+          flex-grow: 1;
+        }
+
+        .formName {
+          margin: 18px 0 25px;
+        }
+
+        .detailSearchInput{
+          order: 6;
+        }
+
+        .submitInput {
+          order: 5;
+
+          button{
+            min-height: 56px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .root {
+    .wrapper {
+      .search {
+        .submitInput {
+          max-width: 230px;
+        }
+      }
+    }
+  }
+}

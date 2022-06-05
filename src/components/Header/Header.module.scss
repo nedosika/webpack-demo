@@ -1,36 +1,107 @@
+@import "./src/css/media_endpoints";
+@import "./src/css/colors";
+
 .root {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    padding: 15px 0 15px;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
 
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 1230px;
-        padding: 0 15px;
-        margin: 0 auto;
-        box-sizing: border-box;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1230px;
+    padding: 10px 15px;
+    margin: 0 auto;
 
-        .buttons {
-            display: flex;
-            width: 100%;
-            justify-content: flex-end;
+    .buttons {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
 
-            & > div, & > a {
-                margin: 0 12px;
-                cursor: pointer;
-            }
-        }
+      div, a {
+        margin: 0 12px;
+        cursor: pointer;
+      }
 
-        .menu {
-            margin-left: 30px;
-            cursor: pointer;
-        }
+      .icon {
+        vertical-align: middle;
+      }
     }
+
+    .mobileHide {
+      align-items: center;
+      display: none;
+
+      .citySelect {
+        border: none;
+        font-family: ProximaNova-Semibold;
+        margin-left: 3px;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .social {
+        display: inline-flex;
+
+        a {
+          margin: 0 4px;
+        }
+
+        img {
+          vertical-align: middle;
+        }
+      }
+
+      img {
+        margin-right: 10px;
+      }
+
+      a {
+        font-family: ProximaNova-Semibold;
+        font-size: 1em;
+        color: $font;
+        text-decoration: none;
+      }
+    }
+
+    .menu {
+      margin-left: 30px;
+      cursor: pointer;
+    }
+
+    .logo {
+      img {
+        vertical-align: middle;
+        width: 106px;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .root {
+    .wrapper {
+      padding: 30px 15px;
+
+      .logo {
+        img{
+          width: 167px;
+        }
+      }
+
+      .mobileHide{
+        display: flex;
+      }
+
+      .buttons, .menu {
+        display: none;
+      }
+    }
+  }
 }
 

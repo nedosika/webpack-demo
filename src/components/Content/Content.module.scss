@@ -1,0 +1,13 @@
+@import "./src/css/media_endpoints";
+@import "./src/css/colors";
+
+.root{
+  margin-top: 60px;
+}
+
+@media (min-width: $tablet){
+  .root{
+    margin-top: 226px;
+  }
+}
+
