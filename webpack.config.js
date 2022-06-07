@@ -33,14 +33,14 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/images/[name]-[hash][ext]'
+                    filename: 'assets/images/[name]-[contenthash][ext]'
                 }
             },
             {
                 test: /\.(ico)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: '[name]-[hash][ext]'
+                    filename: '[name]-[contenthash][ext]'
                 }
             },
             {
@@ -65,10 +65,16 @@ module.exports = {
                         }
                     },
                     {
-                        loader: "sass-loader",
+                        loader: "postcss-loader",
                         options: {
-                            sourceMap: true,
-                        },
+                            postcssOptions: {
+                                plugins: [
+                                    "postcss-import",
+                                    "postcss-nested",
+                                    "postcss-simple-vars"
+                                ],
+                            }
+                        }
                     }
                 ],
             },
@@ -80,14 +86,14 @@ module.exports = {
             favicon: "./public/favicon.ico",
         }),
         new MiniCssExtractPlugin({
-            filename: "[name]-[fullhash].css",
+            filename: "[name]-[contenthash].css",
         }),
         new DefinePlugin({
             VERSION: JSON.stringify('5fa3b9'),
         })
     ],
     output: {
-        filename: '[name]-[hash].bundle.js',
+        filename: '[name]-[contenthash].bundle.js',
         path: path.resolve(__dirname, 'build'),
         //assetModuleFilename: 'assets/images/[name]-[hash][ext]',
         clean: true,
