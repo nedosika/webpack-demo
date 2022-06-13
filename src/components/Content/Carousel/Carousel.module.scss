@@ -1,0 +1,157 @@
+@import "../../../css/media_endpoints.scss";
+@import "../../../css/colors.scss";
+@import "../../../css/consts.scss";
+
+.root {
+  position: relative;
+  user-select: none;
+  margin-top: 15px;
+
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  .wrapper {
+    position: relative;
+    padding-bottom: 54px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+
+    .indicators {
+      display: flex;
+      justify-content: center;
+      margin: 0 2rem 1rem 2rem;
+      list-style: none;
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0;
+
+      .active {
+        background-color: $white;
+        border: 3px solid $orange;
+        height: 18px;
+        width: 18px;
+        margin-top: 0;
+      }
+
+      li {
+        background-color: #fff;
+        height: 12px;
+        width: 12px;
+        margin: 3px 5px;
+        cursor: pointer;
+        border: 2px solid $light-grey;
+
+      }
+    }
+
+    .content {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+      .item {
+        transition: transform 0.6s;
+
+        .area {
+          position: relative;
+
+          .image {
+            min-height: 300px;
+            width: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+            border-style: none;
+          }
+
+          .info {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            max-width: 242px;
+            left: 15px;
+
+            .title {
+              font-family: ProximaNova-Semibold;
+              color: #fff;
+              font-size: 1.5em;
+              line-height: 1.875rem;
+              margin: 44px 0 13px;
+
+              span {
+                font-family: ProximaNova-Bold;
+                color: #ff5100;
+                display: block;
+              }
+            }
+
+            .text {
+              font-size: 0.875em;
+              color: #fff;
+              line-height: 1.25rem;
+              max-width: 333px;
+            }
+
+            a {
+              color: #ff5100;
+              text-decoration: none;
+              background-color: transparent;
+
+              .btn {
+                transition: 0.3s ease;
+                border: 2px solid #ff5100;
+                color: #fff;
+                font-family: ProximaNova-Semibold;
+                margin-top: 30px;
+                min-height: 46px;
+                max-width: 143px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet){
+  .root{
+    .wrapper {
+      .content {
+        .item {
+          .area {
+            .info {
+              max-width: 50%;
+              left: 59px;
+
+              .title {
+                font-size: 3em;
+                line-height: 3.2rem;
+                margin: 76px 0 13px;
+              }
+              .text {
+                font-size: 1.25em;
+                line-height: 1.7rem;
+              }
+
+              a{
+                .btn{
+                  margin-top: 37px;
+                  min-height: 56px;
+                  max-width: 163px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
