@@ -1,22 +1,25 @@
 import React from 'react';
 import styles from "./Info.scss";
+import clock from "./assets/img/clock.svg";
+import mail from "./assets/img/mail.svg";
+import account from "./assets/img/my_account.svg";
 
 const Info = () => {
     return (
         <div className={styles.root}>
             <div className={styles.wrapper}>
                 <span className={styles.workingTime}>
-                    <img alt="clock" src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/clock.svg"/>
+                    <img alt="clock" src={clock}/>
                     з 8:00 до 20:00                </span>
                 <a href="mailto:info@7cars.com.ua">
-                    <img alt="mail" src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/mail.svg"/>
+                    <img alt="mail" src={mail}/>
                     info@7cars.com.ua </a>
                 <div className={styles.floatRight}>
-                    <a href="https://7cars.com.ua/ua/vhid-reyestratsiya/">
+                    <a href="#">
                         <img
                             alt="account"
                             title="Зареєструйтеся на нашому сайті, щоб відслідковувати інформацію про доступність авто в реальному часі"
-                            src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/my_account.svg"
+                            src={account}
                         />
                         Вхід у кабінет </a>
                     <div className={styles.dropArea}>

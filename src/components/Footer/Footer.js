@@ -7,6 +7,7 @@ import visa from "./assets/visa.svg";
 import mastercard from "./assets/mastercard.svg";
 import bitcoin from "./assets/bitcoin.svg";
 import arto from "./assets/arto.svg";
+import logo from "./assets/logotype_footer.svg";
 
 const Footer = () => {
     return (
@@ -17,7 +18,7 @@ const Footer = () => {
                         <img
                             alt="logo"
                             loading="lazy"
-                            src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/logotype_footer.svg"
+                            src={logo}
                             height="63" width="167"
                         />
                         <div className={styles.social}>
