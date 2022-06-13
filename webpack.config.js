@@ -11,6 +11,7 @@ module.exports = {
         alias: {
             Components: path.resolve(__dirname, 'src/components/'),
             Pages: path.resolve(__dirname, 'src/pages/'),
+            Styles: path.resolve(__dirname, 'src/css/'),
         },
     },
     entry: {
@@ -62,6 +63,7 @@ module.exports = {
                                 localIdentName: '[local]_[md5:contenthash:base64:5]',
                             },
                             sourceMap: true,
+                            import: true,
                         }
                     },
                     {
