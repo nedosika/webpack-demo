@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./Feedback.module.scss";
+import call from "./assets/img/call.svg";
 
 const Feedback = () => {
     return (
@@ -8,7 +9,7 @@ const Feedback = () => {
                 <img
                     alt="feedback"
                     loading="lazy"
-                    src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/call.svg"
+                    src={call}
                 />
             </div>
         </div>

@@ -4,6 +4,9 @@ import logoImg from "./assets/logotype.svg";
 import phoneImg from "./assets/phone_2.svg";
 import locationImg from "./assets/location.svg";
 import accountImg from "./assets/my_account.svg";
+import viber from "./assets/viber.svg";
+import telegram from "./assets/telegram.svg";
+import whatsapp from "./assets/whatsapp.svg";
 import Info from "Components/Header/Info";
 import Navigation from "Components/Header/Navigation";
 
@@ -44,7 +47,7 @@ const Header = ({onShowMenu}) => {
                 <div className={styles.mobileHide}>
                     <img
                         alt="place"
-                        src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/location.svg"
+                        src={locationImg}
                     />
                     <select name="city" className={styles.citySelect}>
                         <option value="0" selected="">
@@ -67,35 +70,35 @@ const Header = ({onShowMenu}) => {
                 <div className={styles.mobileHide}>
                     <img
                         alt="phone"
-                        src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/smartphone.svg"
+                        src={phoneImg}
                     />
                     <a rel="nofollow" href="tel:+38 (067) 521 78 77">
                         +38 (067) 521 78 77
                     </a>
                     <div className={styles.social}>
                         <a rel="nofollow" href="tel:+38 (067) 521 78 77"/>
-                        <a rel="nofollow" href="viber://add?number=380675217877">
+                        <a rel="nofollow" href="#">
                             <img
                                 alt="Viber"
-                                src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/viber.svg"
+                                src={viber}
                             />
                         </a>
                         <a rel="nofollow" href="https://t.me/SevenCarsBot">
                             <img
                                 alt="Telegram"
-                                src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/telegram.svg"
+                                src={telegram}
                             />
                         </a>
                         <a rel="nofollow" href="https://api.whatsapp.com/send?phone=+380675217877">
                             <img
                                 alt="Whatsapp"
-                                src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/whatsapp.svg"
+                                src={whatsapp}
                             />
                         </a>
                     </div>
                 </div>
                 <div className={styles.mobileHide}>
-                    <img alt="phone" src="https://7cars.com.ua/wp-content/themes/avto_n/includes/img/icon/phone_2.svg"/>
+                    <img alt="phone" src={phoneImg}/>
                     <a href="tel:+38 (044) 531 78 77">+38 (044) 531 78 77 </a>
                 </div>
                 <div className={styles.menu} onClick={onShowMenu}>
