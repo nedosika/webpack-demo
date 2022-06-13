@@ -30,7 +30,7 @@ const Carousel = () => {
                                     Забронируйте понравившееся авто заранее и получите скидку до 15%
                                 </div>
                                 <a href="#">
-                                    <span className={styles.button}>Подробнее</span>
+                                    <span className={styles.btn}>Подробнее</span>
                                 </a>
                             </div>
                         </div>
