@@ -1,0 +1,118 @@
+@import "../../../css/media_endpoints.scss";
+@import "../../../css/colors.scss";
+@import "../../../css/consts.scss";
+
+.root{
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin: 10px 0 12px;
+
+  position: relative;
+  width: 100%;
+
+  .wrapper{
+    height: 140px;
+    width: 140px;
+    margin: 0 auto 20px;
+    position: relative;
+    .number{
+      background: none;
+      color: $black;
+      font-family: ProximaNova-Semibold;
+      line-height: 98px;
+      border-radius: 50%;
+      bottom: 0.4em;
+      cursor: default;
+      display: block;
+      font-size: 2.5em;
+      left: 20px;
+      position: absolute;
+      right: 0.4em;
+      text-align: center;
+      top: 0.4em;
+
+      span{
+        font-size: 14px;
+        padding-bottom: 20px;
+        vertical-align: super;
+        color: #333;
+      }
+    }
+    .pie{
+      height: 100%;
+      width: 100%;
+      clip: rect(0, 160px, 160px, 80px);
+      left: 0;
+      position: absolute;
+      top: 0;
+
+      -webkit-animation-duration: 0.01s;
+      -webkit-animation-delay: 1s;
+      -webkit-animation-name: close-wrapper;
+
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+      -webkit-animation-timing-function: linear;
+
+      .leftSide{
+        -webkit-animation-duration: 1.8s;
+        -webkit-animation-name: left-spin-89;
+
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-timing-function: linear;
+
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+
+        border-color: $orange;
+
+        clip: rect(0, 70px, 140px, 0);
+
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+      .rightSide{
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-timing-function: linear;
+
+        -webkit-animation-duration: 1s;
+        -webkit-animation-name: right-spin;
+
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        border-color: $orange;
+
+        clip: rect(0, 70px, 140px, 0);
+
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+    }
+    .shadow{
+      height: 100%;
+      width: 100%;
+      border: 6px solid #bdc3c7;
+      border-radius: 50%;
+      box-shadow: none !important;
+    }
+  }
+  p{
+    color: $black;
+    font-size: 1.125em;
+    font-family: ProximaNova-Bold;
+    line-height: 1.5rem;
+    margin: 0 auto;
+    max-width: 270px;
+    text-align: center;
+  }
+}

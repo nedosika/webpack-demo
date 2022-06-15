@@ -3,6 +3,7 @@ import Order from "Components/Content/Order";
 import styles from "./Content.module.scss";
 import Cars from "Components/Content/Cars";
 import Carousel from "Components/Content/Carousel";
+import Charts from "Components/Content/Charts";
 
 const Content = () => {
     return (
@@ -10,6 +11,7 @@ const Content = () => {
             <Order/>
             <Cars/>
             <Carousel/>
+            <Charts/>
         </main>
     );
 };
