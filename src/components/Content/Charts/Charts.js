@@ -12,7 +12,7 @@ const Charts = () => {
                     ознакомиться <a href="#">в статье</a>
                 </p>
                 <div className={styles.charts}>
-                    <Chart number={89} description="клиентов оценили наши авто на отлично"/>
+                    <Chart number={50} description="клиентов оценили наши авто на отлично"/>
                     <Chart number={92} description="клиентов быстро получили всю необходимую информацию при первом контакте с менеджером"/>
                     <Chart number={94} description="клиентов получили авто не более чем за 30 минут после приезда в офис"/>
                     <Chart number={96} description="клиентов отметили, что получили чистое авто"/>

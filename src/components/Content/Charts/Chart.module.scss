@@ -41,62 +41,12 @@
     .pie{
       height: 100%;
       width: 100%;
-      clip: rect(0, 160px, 160px, 80px);
       left: 0;
       position: absolute;
       top: 0;
 
-      -webkit-animation-duration: 0.01s;
-      -webkit-animation-delay: 1s;
-      -webkit-animation-name: close-wrapper;
-
-      -webkit-animation-iteration-count: 1;
-      -webkit-animation-fill-mode: forwards;
-      -webkit-animation-timing-function: linear;
-
-      .leftSide{
-        -webkit-animation-duration: 1.8s;
-        -webkit-animation-name: left-spin-89;
-
-        -webkit-animation-iteration-count: 1;
-        -webkit-animation-fill-mode: forwards;
-        -webkit-animation-timing-function: linear;
-
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-
-        border-color: $orange;
-
-        clip: rect(0, 70px, 140px, 0);
-
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
-        left: 0;
-        position: absolute;
-        top: 0;
-      }
-      .rightSide{
-        -webkit-animation-iteration-count: 1;
-        -webkit-animation-fill-mode: forwards;
-        -webkit-animation-timing-function: linear;
-
-        -webkit-animation-duration: 1s;
-        -webkit-animation-name: right-spin;
-
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-        border-color: $orange;
-
-        clip: rect(0, 70px, 140px, 0);
-
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
-        left: 0;
-        position: absolute;
-        top: 0;
-      }
+      border: 6px solid $orange;
+      border-radius: 50%;
     }
     .shadow{
       height: 100%;
@@ -114,5 +64,17 @@
     margin: 0 auto;
     max-width: 270px;
     text-align: center;
+  }
+}
+
+@media (min-width: $tablet){
+  .root{
+      max-width: 50%;
+  }
+}
+
+@media (min-width: $desktop){
+  .root{
+    max-width: 33.333333%;
   }
 }
